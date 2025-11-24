@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GaonShield</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_message">Welcome, %s</string>
+    <string name="community_dashboard">Community Dashboard</string>
+    <string name="asha_worker_default">ASHA Worker</string>
+    <string name="villager_role">Villager</string>
+    <string name="health_reports">Health Reports</string>
+    <string name="create_alert">Create Alert</string>
+    <string name="submit_report">Submit Report</string>
+</resources>

@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background_gradient_blue">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Health Report and Disease Prediction"
+            android:textSize="24sp"
+            android:textColor="@color/blue_primary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <!-- Health Form Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- ========== PATIENT INFORMATION ========== -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Patient Information"
+                    android:textSize="18sp"
+                    android:textColor="@color/blue_primary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Patient Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/blue_primary"
+                    app:hintTextColor="@color/blue_primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPatientName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Patient Name"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Age and Gender Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <!-- Age -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxStrokeColor="@color/blue_primary"
+                        app:hintTextColor="@color/blue_primary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Age"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Gender -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxStrokeColor="@color/blue_primary"
+                        app:hintTextColor="@color/blue_primary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Gender"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- ========== WATER SOURCE ========== -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Water Source"
+                    android:textSize="16sp"
+                    android:textColor="@color/blue_primary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <RadioGroup
+                    android:id="@+id/rgWaterSource"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rbWell"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Well Water"
+                        android:buttonTint="@color/blue_primary" />
+
+                    <RadioButton
+                        android:id="@+id/rbTap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tap Water"
+                        android:buttonTint="@color/blue_primary" />
+
+                    <RadioButton
+                        android:id="@+id/rbRiver"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="River Water"
+                        android:buttonTint="@color/blue_primary" />
+
+                    <RadioButton
+                        android:id="@+id/rbPond"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pond/Lake"
+                        android:buttonTint="@color/blue_primary" />
+
+                </RadioGroup>
+
+                <!-- ========== SYMPTOMS ========== -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Symptoms (Select all that apply)"
+                    android:textSize="16sp"
+                    android:textColor="@color/blue_primary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Symptoms Grid - Updated with all required checkboxes -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="6"
+                    android:layout_marginBottom="16dp">
+
+                    <CheckBox
+                        android:id="@+id/cbFever"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Fever"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:buttonTint="@color/blue_primary" />
+
+                    <CheckBox
+                        android:id="@+id/cbDiarrhea"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Diarrhea"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:buttonTint="@color/blue_primary" />
+
+                    <CheckBox
+                        android:id="@+id/cbVomiting"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Vomiting"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:buttonTint="@color/blue_primary" />
+
+                    <CheckBox
+                        android:id="@+id/cbAbdominalPain"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Abdominal Pain"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:buttonTint="@color/blue_primary" />
+
+                    <!-- ADD THE MISSING CHECKBOXES HERE -->
+                    <CheckBox
+                        android:id="@+id/cbDehydration"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Dehydration"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:buttonTint="@color/blue_primary" />
+
+                    <CheckBox
+                        android:id="@+id/cbBloodInStool"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Blood in Stool"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:buttonTint="@color/blue_primary" />
+
+                    <CheckBox
+                        android:id="@+id/cbFatigue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Fatigue"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:buttonTint="@color/blue_primary" />
+
+                    <CheckBox
+                        android:id="@+id/cbNausea"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nausea"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:buttonTint="@color/blue_primary" />
+
+                    <CheckBox
+                        android:id="@+id/cbMuscleCramps"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Muscle Cramps"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:buttonTint="@color/blue_primary" />
+
+                    <CheckBox
+                        android:id="@+id/cbHeadache"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Headache"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:buttonTint="@color/blue_primary" />
+
+                </GridLayout>
+
+                <!-- ========== SYMPTOM DURATION & SEVERITY ========== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <!-- Symptom Duration -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxStrokeColor="@color/blue_primary"
+                        app:hintTextColor="@color/blue_primary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etSymptomDuration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Symptom Duration (days)"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Severity -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxStrokeColor="@color/blue_primary"
+                        app:hintTextColor="@color/blue_primary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etSeverity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Severity (1-10)"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- ========== DISEASE PREDICTION SECTION ========== -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AI Disease Prediction"
+                    android:textSize="18sp"
+                    android:textColor="@color/blue_primary"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Prediction Result Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPredictionResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="#F8F9FA">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/tvPredictionTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Prediction Result"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue_primary"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:id="@+id/tvPredictionResult"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="No prediction yet"
+                            android:textSize="18sp"
+                            android:textColor="#333333"
+                            android:gravity="center"
+                            android:layout_marginBottom="4dp" />
+
+                        <TextView
+                            android:id="@+id/tvConfidence"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="14sp"
+                            android:textColor="#666666"
+                            android:gravity="center"
+                            android:layout_marginBottom="8dp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- ========== ACTION BUTTONS ========== -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <!-- Predict Button -->
+                    <Button
+                        android:id="@+id/btnPredict"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:text="Predict Disease"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/blue_primary"
+                        android:textColor="#FFFFFF"
+                        android:padding="12dp"
+                        app:cornerRadius="8dp" />
+
+                    <!-- Submit Button -->
+                    <Button
+                        android:id="@+id/btnSubmitReport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="Submit Report"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/success_green"
+                        android:textColor="#FFFFFF"
+                        android:padding="12dp"
+                        app:cornerRadius="8dp" />
+
+                </LinearLayout>
+
+                <!-- Clear Form Button -->
+                <Button
+                    android:id="@+id/btnClearForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Clear Form"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:backgroundTint="#757575"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp"
+                    app:cornerRadius="8dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

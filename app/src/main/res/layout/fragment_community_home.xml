@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Quick Actions Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quick Actions"
+            android:textSize="18sp"
+            android:textColor="@color/blue_primary"
+            android:textStyle="bold"
+            android:padding="16dp" />
+
+        <!-- Action Cards Grid -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="8dp">
+
+            <!-- First Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Create Alert Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCreateAlert"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/gradient_blue_primary"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:cornerRadius="25dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_add_alert"
+                                app:tint="#FFFFFF" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Create Alert"
+                            android:textSize="14sp"
+                            android:textColor="@color/blue_primary"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Send alerts"
+                            android:textSize="10sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- View Reports Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewReports"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/gradient_blue_accent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:cornerRadius="25dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_health_report"
+                                app:tint="#FFFFFF" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Health Reports"
+                            android:textSize="14sp"
+                            android:textColor="@color/blue_primary"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View reports"
+                            android:textSize="10sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- Second Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Villager Management Card -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardVillagerManagement"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/gradient_green"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:cornerRadius="25dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_villager"
+                                app:tint="#FFFFFF" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Villagers"
+                            android:textSize="14sp"
+                            android:textColor="@color/blue_primary"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Manage data"
+                            android:textSize="10sp"
+                            android:textColor="#666666"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Quick Stats Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Village Health Overview"
+            android:textSize="18sp"
+            android:textColor="@color/blue_primary"
+            android:textStyle="bold"
+            android:padding="16dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#F8F9FA">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quick Stats"
+                    android:textSize="16sp"
+                    android:textColor="@color/blue_primary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Stats Grid -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tvVillagerCount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Villagers: 0"
+                        android:textSize="12sp"
+                        android:textColor="#666666" />
+
+                    <TextView
+                        android:id="@+id/tvReportsCount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Reports: 0"
+                        android:textSize="12sp"
+                        android:textColor="#666666" />
+
+                    <TextView
+                        android:id="@+id/tvAlertsCount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Alerts: 0"
+                        android:textSize="12sp"
+                        android:textColor="#666666" />
+
+                </LinearLayout>
+
+                <!-- Health Stats -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvActiveCases"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Active: 0"
+                        android:textSize="12sp"
+                        android:textColor="#666666" />
+
+                    <TextView
+                        android:id="@+id/tvHighRiskCount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="High Risk: 0"
+                        android:textSize="12sp"
+                        android:textColor="#FF4444"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvOutbreakRisk"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Risk: NONE"
+                        android:textSize="12sp"
+                        android:textColor="#2196F3"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Disease Distribution Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Disease Distribution"
+            android:textSize="18sp"
+            android:textColor="@color/blue_primary"
+            android:textStyle="bold"
+            android:padding="16dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#F8F9FA">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Water-Borne Disease Trends"
+                    android:textSize="14sp"
+                    android:textColor="@color/blue_primary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Disease Progress Bars -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cholera"
+                        android:textSize="12sp"
+                        android:textColor="#666666" />
+
+                    <ProgressBar
+                        android:id="@+id/progressCholera"
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="8dp"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:progressTint="#FF4444"
+                        android:progressBackgroundTint="#FFCDD2" />
+
+                    <TextView
+                        android:id="@+id/tvCholeraCount"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="12sp"
+                        android:textColor="#FF4444"
+                        android:textStyle="bold"
+                        android:gravity="end" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Typhoid"
+                        android:textSize="12sp"
+                        android:textColor="#666666" />
+
+                    <ProgressBar
+                        android:id="@+id/progressTyphoid"
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="8dp"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:progressTint="#FF9800"
+                        android:progressBackgroundTint="#FFE0B2" />
+
+                    <TextView
+                        android:id="@+id/tvTyphoidCount"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="12sp"
+                        android:textColor="#FF9800"
+                        android:textStyle="bold"
+                        android:gravity="end" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Dysentery"
+                        android:textSize="12sp"
+                        android:textColor="#666666" />
+
+                    <ProgressBar
+                        android:id="@+id/progressDysentery"
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="8dp"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:progressTint="#9C27B0"
+                        android:progressBackgroundTint="#E1BEE7" />
+
+                    <TextView
+                        android:id="@+id/tvDysenteryCount"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="12sp"
+                        android:textColor="#9C27B0"
+                        android:textStyle="bold"
+                        android:gravity="end" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Gastro"
+                        android:textSize="12sp"
+                        android:textColor="#666666" />
+
+                    <ProgressBar
+                        android:id="@+id/progressGastro"
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="8dp"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:progressTint="#2196F3"
+                        android:progressBackgroundTint="#BBDEFB" />
+
+                    <TextView
+                        android:id="@+id/tvGastroCount"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="12sp"
+                        android:textColor="#2196F3"
+                        android:textStyle="bold"
+                        android:gravity="end" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Hepatitis"
+                        android:textSize="12sp"
+                        android:textColor="#666666" />
+
+                    <ProgressBar
+                        android:id="@+id/progressHepatitis"
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="8dp"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:progressTint="#4CAF50"
+                        android:progressBackgroundTint="#C8E6C9" />
+
+                    <TextView
+                        android:id="@+id/tvHepatitisCount"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="12sp"
+                        android:textColor="#4CAF50"
+                        android:textStyle="bold"
+                        android:gravity="end" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Malaria"
+                        android:textSize="12sp"
+                        android:textColor="#666666" />
+
+                    <ProgressBar
+                        android:id="@+id/progressMalaria"
+                        android:layout_width="0dp"
+                        android:layout_height="8dp"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="8dp"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:progressTint="#795548"
+                        android:progressBackgroundTint="#D7CCC8" />
+
+                    <TextView
+                        android:id="@+id/tvMalariaCount"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="12sp"
+                        android:textColor="#795548"
+                        android:textStyle="bold"
+                        android:gravity="end" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- High Risk Cases Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="High Risk Cases Requiring Attention"
+            android:textSize="18sp"
+            android:textColor="@color/blue_primary"
+            android:textStyle="bold"
+            android:padding="16dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFF8E1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Priority Cases (Severity ≥ 7)"
+                    android:textSize="14sp"
+                    android:textColor="#FF6F00"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- High Risk Cases List -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHighRiskCases"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Empty State for High Risk Cases -->
+                <TextView
+                    android:id="@+id/tvNoHighRisk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🎉 No high risk cases currently"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Bottom Spacing -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+    </LinearLayout>
+
+</ScrollView>

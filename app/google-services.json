@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "602947145924",
+    "project_id": "fir-gaonshield",
+    "storage_bucket": "fir-gaonshield.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602947145924:android:e7f5c5436b6818c9ecb991",
+        "android_client_info": {
+          "package_name": "com.example.firebasegaonshield"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPkBNJDyljppP43RlkMXCWOY0OcVsGYbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

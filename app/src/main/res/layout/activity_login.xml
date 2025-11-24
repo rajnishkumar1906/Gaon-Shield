@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <!-- App Logo -->
+        <ImageView
+            android:id="@+id/ivAppLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_health_logo"
+            app:tint="@color/blue_primary"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp" />
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome Back"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue_primary"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign in to continue"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Email Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxStrokeColor="@color/blue_primary"
+            app:hintTextColor="@color/blue_primary"
+            app:startIconDrawable="@drawable/ic_email"
+            app:startIconTint="@color/blue_primary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:textSize="16sp"
+                android:padding="16dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxStrokeColor="@color/blue_primary"
+            app:hintTextColor="@color/blue_primary"
+            app:startIconDrawable="@drawable/ic_password"
+            app:startIconTint="@color/blue_primary"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/blue_primary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textSize="16sp"
+                android:padding="16dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Sign In"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/blue_primary"
+            android:textColor="#FFFFFF"
+            android:letterSpacing="0.02"
+            app:cornerRadius="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Register Link -->
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? Register Now"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textColor="#666666" />
+
+    </LinearLayout>
+</ScrollView>

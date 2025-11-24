@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Enhanced Header Section with Gradient -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:background="@drawable/header_gradient_blue"
+            android:paddingTop="24dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="32dp"
+            android:elevation="8dp">
+
+            <!-- Top Bar with Notification -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- User Avatar with Circular Background -->
+                    <LinearLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/circle_background_white"
+                        android:gravity="center"
+                        android:elevation="4dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_villager"
+                            app:tint="@color/blue_primary" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome Back!"
+                            android:textSize="14sp"
+                            android:textColor="#80FFFFFF"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/tvWelcome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Villager Name"
+                            android:textSize="20sp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold"
+                            android:layout_marginTop="2dp" />
+
+                        <TextView
+                            android:id="@+id/tvVillage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Green Valley Village"
+                            android:textSize="12sp"
+                            android:textColor="#A0FFFFFF"
+                            android:layout_marginTop="2dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Stats Cards - Health Focused -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="-60dp">
+
+            <!-- Health Reports Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/circle_background_blue"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_health_report"
+                            app:tint="#FFFFFF" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvHealthReports"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:textSize="24sp"
+                        android:textColor="@color/blue_primary"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Health Reports"
+                        android:textSize="12sp"
+                        android:textColor="#666666"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Family Members Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/circle_background_blue_accent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_family"
+                            app:tint="#FFFFFF" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvFamilyCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textSize="24sp"
+                        android:textColor="@color/blue_primary"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Family Members"
+                        android:textSize="12sp"
+                        android:textColor="#666666"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- Quick Stats -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quick Stats"
+            android:textSize="18sp"
+            android:textColor="@color/blue_primary"
+            android:textStyle="bold"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Alerts:"
+                        android:textSize="14sp"
+                        android:textColor="#333333"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAlertsCount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="14sp"
+                        android:textColor="@color/blue_primary"
+                        android:textStyle="bold"
+                        android:gravity="end" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Reports:"
+                        android:textSize="14sp"
+                        android:textColor="#333333"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvReportsCount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="14sp"
+                        android:textColor="@color/blue_primary"
+                        android:textStyle="bold"
+                        android:gravity="end" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Risk Level:"
+                        android:textSize="14sp"
+                        android:textColor="#333333"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvRiskLevel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Low"
+                        android:textSize="14sp"
+                        android:textColor="@color/success_green"
+                        android:textStyle="bold"
+                        android:gravity="end" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

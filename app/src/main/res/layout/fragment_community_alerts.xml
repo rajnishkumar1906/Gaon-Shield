@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Header with Refresh -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blue_primary"
+        android:padding="16dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Manage Alerts"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:textSize="12sp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="@color/blue_primary"
+            app:cornerRadius="8dp" />
+
+    </LinearLayout>
+
+    <!-- Alert Types Filter -->
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All Alerts"
+            android:checked="true"
+            app:chipBackgroundColor="@color/bottom_nav_color_state" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipDisease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disease"
+            app:chipBackgroundColor="@color/bottom_nav_color_state" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipWater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Water Quality"
+            app:chipBackgroundColor="@color/bottom_nav_color_state" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipCommunity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Community"
+            app:chipBackgroundColor="@color/bottom_nav_color_state" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- Alerts List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAlerts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="8dp" />
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/emptyState"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="40dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_no_alerts"
+            app:tint="@color/blue_primary"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/tvEmptyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Alerts Created"
+            android:textSize="20sp"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvEmptyMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create your first alert to notify the community"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            android:layout_marginTop="8dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- New Alert FAB - Visible for ASHA workers -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabNewAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_alert"
+        android:contentDescription="Create new alert"
+        app:backgroundTint="@color/blue_primary"
+        app:tint="#FFFFFF" />
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvPatientName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Patient Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#333333" />
+
+            <!-- Fixed Status Badge - Using direct color -->
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="PENDING"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="#FF9800"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+
+        <!-- Emergency Indicator -->
+        <TextView
+            android:id="@+id/tvEmergency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚨 EMERGENCY"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_marginBottom="4dp"
+            android:background="#FFE5E5"
+            android:padding="2dp"
+            app:cornerRadius="4dp" />
+
+        <!-- Prediction -->
+        <TextView
+            android:id="@+id/tvPrediction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Predicted: Disease"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Symptoms -->
+        <TextView
+            android:id="@+id/tvSymptoms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Symptoms: None"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="4dp"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <!-- Village and Severity -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:id="@+id/tvVillage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Village: Unknown"
+                android:textSize="14sp"
+                android:textColor="#666666" />
+
+            <TextView
+                android:id="@+id/tvSeverity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Severity: 0/10"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FF6B35" />
+
+        </LinearLayout>
+
+        <!-- Time -->
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textSize="12sp"
+            android:textColor="#999999" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Blue Colors -->
+    <color name="blue_primary">#1976D2</color>
+    <color name="blue_primary_dark">#0D47A1</color>
+    <color name="blue_primary_light">#42A5F5</color>
+    <color name="blue_accent">#2196F3</color>
+    <color name="blue_light">#E3F2FD</color>
+
+    <!-- Background Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="background_gray">#F5F5F5</color>
+    <color name="light_blue_bg">#E3F2FD</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_blue">#1976D2</color>
+
+    <!-- Status Colors -->
+    <color name="orange">#FF9800</color>
+    <color name="red">#F44336</color>
+    <color name="dark_red">#D32F2F</color>
+    <color name="unread_alert_bg">#E3F2FD</color>
+    <color name="success_green">#4CAF50</color>
+    <color name="warning_orange">#FF9800</color>
+
+    <!-- Bottom Navigation -->
+    <color name="bottom_nav_item_color">#E3F2FD</color>
+
+    <color name="blue">#2196F3</color>
+    <color name="green">#4CAF50</color>
+    <color name="gray">#9E9E9E</color>
+
+
+    <color name="primary_color">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="accent_color">#FF4081</color>
+
+    <color name="black">#000000</color>
+    <color name="light_gray">#F5F5F5</color>
+
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Health Reports"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/blue_primary" />
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/emptyStateReports"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="40dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_no_reports"
+            app:tint="@color/blue_primary"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/tvEmptyStateMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Reports"
+            android:textSize="20sp"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No health reports available"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            android:layout_marginTop="8dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- Reports List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReports"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:contentDescription="kbvvklnv"/>
+
+</LinearLayout>
